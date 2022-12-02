@@ -1,6 +1,6 @@
 # Sublight_Engines_Landing_Page
 
-# For this week's projecy we had to create a static landing page with HTML and CSS. Ahll the elements for the webpage look were defined in a figma template: 
+## For this week's project we had to create a static landing page with HTML and CSS. Ahll the elements for the webpage look were defined in a figma template: 
 
 https://www.figma.com/file/8jBCJGinoHhn4wj7N2K7R2/Sublight-Engines-Landing-Page?node-id=0%3A1
 
