@@ -17,7 +17,8 @@
         <!-- STYLESHEETS -->
         <link rel="stylesheet" href="css/main.css" />
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-        <script type="text/javascript">
+        <script defer src="js/main.js"></script>
+        <!-- <script type="text/javascript">
             (function () {
                 emailjs.init("ns5XfVbH1t_HcZpVn");
             })();
@@ -34,7 +35,7 @@
                         .then(
                             function () {
                                 console.log("SUCCESS!");
-                                alert("Your request is succefully sent !");
+                                alert("Your request was succefully sent !");
                                 location.reload();
                             },
                             function (error) {
@@ -43,7 +44,7 @@
                         );
                 });
             };
-        </script>
+        </script> -->
     </head>
     <body>
         <!-- HEADER -->
@@ -228,17 +229,20 @@
                     <div class="form-control">
                         <label for="request_fullname">Name *</label>
                         <input id="request_fullname" type="text" name="fullname" placeholder="Enter your full name" required />
+                        <div class="error"></div>
                     </div>
 
                     <div class="form-control">
-                        <label for="request_email">Email address *</label>
-                        <input id="request_email" type="email" name="email" placeholder="yourname@company.com" required />
+                        <label for="email">Email address *</label>
+                        <input id="email" type="text" name="email" placeholder="yourname@company.com" required />
+                        <div class="error"></div>
                     </div>
 
                     <div class="group-flex-controls">
                         <div class="form-control group-item">
                             <label for="request_phone">Phone Number</label>
                             <input id="request_phone" type="tel" name="telephone" placeholder="0 (000) 000-0000" />
+                            <div class="error"></div>
                         </div>
 
                         <div class="form-control group-item">
@@ -295,6 +299,6 @@
                 <p>All rights reserved to CodeBoxx Solutions &copy;, 2022.</p>
             </div>
         </footer>
-        <script src="js/main.js"></script>
+        
     </body>
 </html>
