@@ -56,7 +56,7 @@
 
             <!-- MAIN NAVIGATION -->
             <nav class="navbar">
-                <!-- <a href="#" class="nav-branding"></a> -->
+                <a href="#" class="nav-branding"></a>
                 <ul class="nav-menu">
                     <li class="nav-item">
                         <a href="#services" class="nav-link"> Our Services </a>
@@ -227,23 +227,30 @@
 
                 <form id="service_request_form" action="/index.html" method="post">
                     <div class="form-control">
+                        <div class="input-control">
                         <label for="request_fullname">Name *</label>
                         <input id="request_fullname" type="text" name="fullname" placeholder="Enter your full name" required />
                         <div class="error"></div>
                     </div>
+                    </div>
 
                     <div class="form-control">
+                        <div class="input-control">
                         <label for="email">Email address *</label>
                         <input id="email" type="text" name="email" placeholder="yourname@company.com" required />
                         <div class="error"></div>
                     </div>
+                    </div>
 
                     <div class="group-flex-controls">
                         <div class="form-control group-item">
+                            <div class="input-control">
                             <label for="request_phone">Phone Number</label>
                             <input id="request_phone" type="tel" name="telephone" placeholder="0 (000) 000-0000" />
                             <div class="error"></div>
                         </div>
+                        </div>
+
 
                         <div class="form-control group-item">
                             <label for="request_language">Preferred language</label>

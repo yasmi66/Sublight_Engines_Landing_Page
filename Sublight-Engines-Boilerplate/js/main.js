@@ -1,10 +1,11 @@
-// FORM VALIDATIONS //
+// FORM FIELDS VALIDATIONS //
 
 const form = document.getElementById('service_request_form');
 const fullName = document.getElementById('request_fullname');
 const email = document.getElementById('email');
+const phone = document.getElementById('request_phone');
 
-
+// If so, error messages will be displayed under the fields after clicking on "submit"
 form.addEventListener('submit', e => {
     e.preventDefault();
     console.log("#### test")
@@ -45,7 +46,6 @@ const validateInputs = () => {
     } else {
         setSuccess(fullName);
     }
-
     if(emailValue === '') {
         setError(email, 'Email is required');
     } else if (!isValidEmail(emailValue)) {
@@ -53,54 +53,20 @@ const validateInputs = () => {
     } else {
         setSuccess(email);
     }
-    
 };
 
 
+// HAMBURGA' MENU
 
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
 
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+})
 
-
-
-
-// // As per the HTML Specification
-// const emailRegExp =
-//   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-
-// // Now we can rebuild our validation constraint
-// // Because we do not rely on CSS pseudo-class, we have to
-// // explicitly set the valid/invalid class on our email field
-// window.addEventListener("load", () => {
-//   // Here, we test if the field is empty (remember, the field is not required)
-//   // If it is not, we check if its content is a well-formed e-mail address.
-//   const isValid = email.value.length === 0 || emailRegExp.test(email.value);
-//   email.className = isValid ? "valid" : "invalid";
-// });
-
-// // This defines what happens when the user types in the field
-// email.addEventListener("input", () => {
-//   const isValid = email.value.length === 0 || emailRegExp.test(email.value);
-//   if (isValid) {
-//     email.className = "valid";
-//     error.textContent = "";
-//     error.className = "error";
-//   } else {
-//     email.className = "invalid";
-//   }
-// });
-
-// // This defines what happens when the user tries to submit the data
-// form.addEventListener("submit", (event) => {
-//   event.preventDefault();
-
-//   const isValid = email.value.length === 0 || emailRegExp.test(email.value);
-//   if (!isValid) {
-//     email.className = "invalid";
-//     error.textContent = "I expect an e-mail, darling!";
-//     error.className = "error active";
-//   } else {
-//     email.className = "valid";
-//     error.textContent = "";
-//     error.className = "error";
-//   }
-// });
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click"), () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+})
