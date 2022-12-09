@@ -34,12 +34,10 @@
                         })
                         .then(
                             function () {
-                                console.log("SUCCESS!");
                                 alert("Your request was succefully sent !");
                                 location.reload();
                             },
                             function (error) {
-                                console.log("FAILED...", error);
                             }
                         );
                 });
@@ -210,11 +208,11 @@
                 </div>
 
                 <div class="dowload-cta-wrapper">
-                    <a href="assets/sample_pdf.pdf" target="_blank" class="download-catalog-link"> Download our catalog </a>
+                    <a href="" target="_blank" class="download-catalog-link"> Download our catalog </a>
                 </div>
             </section>
 
-            <!-- SERVICE REQUEST -->
+            <!-- SERVICE REQUEST (FORM) -->
             <section id="service_request">
                 <div class="section-heading-wrapper">
                     <h2>
@@ -229,7 +227,7 @@
                     <div class="form-control">
                         <div class="input-control">
                         <label for="request_fullname">Name *</label>
-                        <input id="request_fullname" type="text" name="fullname" placeholder="Enter your full name" required />
+                        <input id="request_fullname" type="text" name="fullname" placeholder="Enter your full name" required="required" pattern="^(?![\s.]+$)[a-zA-Z\s.]*$" />
                         <div class="error"></div>
                     </div>
                     </div>
@@ -237,7 +235,7 @@
                     <div class="form-control">
                         <div class="input-control">
                         <label for="email">Email address *</label>
-                        <input id="email" type="text" name="email" placeholder="yourname@company.com" required />
+                        <input id="email" type="text" name="email" placeholder="yourname@company.com" required="required" />
                         <div class="error"></div>
                     </div>
                     </div>
@@ -246,7 +244,7 @@
                         <div class="form-control group-item">
                             <div class="input-control">
                             <label for="request_phone">Phone Number</label>
-                            <input id="request_phone" type="tel" name="telephone" placeholder="0 (000) 000-0000" />
+                            <input id="request_phone" type="tel" name="telephone" placeholder="0 (000) 000-0000" required="required" pattern="^[0-9]{1} ?[(]?[0-9]{3}[)]\s?[0-9]{3}[-\s]?[0-9]{4,6}$" title="Format: 0 (000) 000-0000" />
                             <div class="error"></div>
                         </div>
                         </div>

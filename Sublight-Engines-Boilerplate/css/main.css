@@ -206,7 +206,7 @@ section:not(#hero) {
     padding: 75px 15px;
 }
 
-/* Services */
+/* SERVICES */
 section#services {
     background-color: #383838;
 }
@@ -235,7 +235,7 @@ section#services .service-item p {
     color: #fff;
 }
 
-/* Security */
+/* SECURITY */
 section#security {
     padding-left: 50px;
     padding-right: 50px;
@@ -276,7 +276,7 @@ section#security .section-content p {
     font-weight: 400;
 }
 
-/* Products */
+/* PRODUCTS */
 section#products {
     background-color: #ff7630;
 }
@@ -344,7 +344,7 @@ section#products .dowload-cta-wrapper a.download-catalog-link:focus {
     background-color: #383838;
 }
 
-/* Service Request */
+/* SERVICE REQUEST (FORM) */
 section#service_request .section-heading-wrapper h2 {
     color: #ff7630;
 }
@@ -395,7 +395,7 @@ section#service_request form input[type="submit"]:active {
     color: #fff;
 }
 
-/* About Us */
+/* ABOUT US */
 section#about_us {
     background-color: #292929;
 }
@@ -579,7 +579,7 @@ li {
         text-align: center;
         transition: 0.8s;
         align-items: flex-start;
-        /* transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+        
     }
 
     .nav-item {
@@ -601,7 +601,7 @@ li {
         display: block;
     }
 
-
+    
     .dowload-cta-wrapper {
         position: fixed;
         top: 90%;

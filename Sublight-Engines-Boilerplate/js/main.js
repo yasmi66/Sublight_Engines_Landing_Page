@@ -5,7 +5,7 @@ const fullName = document.getElementById('request_fullname');
 const email = document.getElementById('email');
 const phone = document.getElementById('request_phone');
 
-// If so, error messages will be displayed under the fields after clicking on "submit"
+// If so, error messages will be displayed under the fields after clicking on "submit"//
 form.addEventListener('submit', e => {
     e.preventDefault();
     console.log("#### test")
