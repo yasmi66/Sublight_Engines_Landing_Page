@@ -32,7 +32,7 @@
             function sendMail() {
                 document.getElementById("service_request_form").addEventListener("submit", function(event) {
                     event.preventDefault();
-                    emailjs.sendForm('service_gk8hxwg', 'template_75uzeig', "#service_request_form", "2tYjYQ5nP4oIVEHu5")
+                    emailjs.sendForm('service_t6s135i', 'template_75uzeig', "#service_request_form", "2tYjYQ5nP4oIVEHu5")
                         .then(function() {
                             let x = document.forms["sendForm"]["request_fullname"].value;
                             let g = document.forms["sendForm"]["languages"].value;
@@ -233,7 +233,7 @@
                     <img src="images/separator-black.svg" class="separator" alt="separator" />
                 </div>
 
-                <form id="service_request_form" action="/index.html" name="sendForm" method="post" onsubmit="sendForm()">
+                <form id="service_request_form" action="/index.html" name="sendForm" method="post">
                     <div class="form-control">
                         <div class="input-control">
                         <label for="request_fullname">Name *</label>
