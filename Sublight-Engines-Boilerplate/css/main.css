@@ -101,7 +101,6 @@ a {
 
 /* HEADER */
 header {
-    /* background-position: center center; */
     position: fixed;
     left: 0;
     top: 0;
@@ -111,7 +110,7 @@ header {
     width: 100%;
     padding: 5px 0 0;
     z-index: 5;
-    /* background-size: cover; */
+    
 }
 
 header::after {

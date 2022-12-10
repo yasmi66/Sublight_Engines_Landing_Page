@@ -25,14 +25,14 @@
         <script defer src="js/main.js"></script>
         <script type="text/javascript">
             (function() {
-            emailjs.init("2tYjYQ5nP4oIVEHu5");
+            emailjs.init("6jXOisFN7z8vi8n7w");
             })();
         </script>
         <script type="text/javascript">
             function sendMail() {
                 document.getElementById("service_request_form").addEventListener("submit", function(event) {
                     event.preventDefault();
-                    emailjs.sendForm('service_t6s135i', 'template_75uzeig', "#service_request_form", "2tYjYQ5nP4oIVEHu5")
+                    emailjs.sendForm('service_fb672gh', 'template_gxeeqrj', "#service_request_form", "6jXOisFN7z8vi8n7w")
                         .then(function() {
                             let x = document.forms["sendForm"]["request_fullname"].value;
                             let g = document.forms["sendForm"]["languages"].value;
