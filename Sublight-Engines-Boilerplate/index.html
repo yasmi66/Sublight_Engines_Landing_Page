@@ -6,7 +6,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Sublight Engines</title>
-        <meta name="description" content="Elevator cab controls you can rely on. Our mission? Take you to the top." />
+        <meta name="title" content="Elevator cab controls you can rely on. Our mission? Take you to the top." />
+        <meta name="keywords" content="elevator, cab, cab controls, safety, secureboards, door, mechanics, hoistway, hatch, catalog">
+        <meta property="og:description" lang="en" content="One-stop for your elevator needs, one step closer to success.">
+        <meta property="og:title" content="Sublight Engines Elevator Cab Controls: Our Mission - Take You To The Top!">
+        <meta property="og:url" content="https://github.com/yasmi66/Sublight_Engines_Landing_Page.git">
+        <meta property="og:site_name" content="Sublight Engines">
         <!-- FAVICON -->
         <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
@@ -18,31 +23,36 @@
         <link rel="stylesheet" href="css/main.css" />
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
         <script defer src="js/main.js"></script>
-        <!-- <script type="text/javascript">
-            (function () {
-                emailjs.init("ns5XfVbH1t_HcZpVn");
+        <script type="text/javascript">
+            (function() {
+            emailjs.init("2tYjYQ5nP4oIVEHu5");
             })();
-            window.onload = function () {
-                document.getElementById("service_request_form").addEventListener("submit", function (event) {
+        </script>
+        <script type="text/javascript">
+            function sendMail() {
+                document.getElementById("service_request_form").addEventListener("submit", function(event) {
                     event.preventDefault();
-                    emailjs
-                        .send("service_3e5pv2t", "template_2n471km", {
-                            to_request_fullname: document.getElementById("request_fullname").value,
-                            request_phone: document.getElementById("request_phone").value,
-                            request_language: document.getElementById("request_language").value,
-                            from_name: "Sublight Engines",
-                        })
-                        .then(
-                            function () {
-                                alert("Your request was succefully sent !");
-                                location.reload();
-                            },
-                            function (error) {
+                    emailjs.sendForm('service_gk8hxwg', 'template_75uzeig', "#service_request_form", "2tYjYQ5nP4oIVEHu5")
+                        .then(function() {
+                            let x = document.forms["sendForm"]["request_fullname"].value;
+                            let g = document.forms["sendForm"]["languages"].value;
+                            if (x == "") {
+                                alert("Name must be filled out");
+                                return false;
                             }
-                        );
+                            else {
+                            console.log('SUCCESS!');
+                            alert("message sent, successfully");
+                            document.getElementById("service_request_form").reset();
+                            }
+                        }, function(error) {
+                            console.log('FAILED...', error);
+                            alert("message sent, failed");
+                        });
                 });
-            };
-        </script> -->
+            }
+
+        </script>
     </head>
     <body>
         <!-- HEADER -->
@@ -223,7 +233,7 @@
                     <img src="images/separator-black.svg" class="separator" alt="separator" />
                 </div>
 
-                <form id="service_request_form" action="/index.html" method="post">
+                <form id="service_request_form" action="/index.html" name="sendForm" method="post" onsubmit="sendForm()">
                     <div class="form-control">
                         <div class="input-control">
                         <label for="request_fullname">Name *</label>
@@ -260,8 +270,8 @@
                         </div>
                     </div>
 
-                    <div class="form-action">
-                        <input type="submit" value="Submit" />
+                    <div class="form-action" >
+                        <input class="submit" type="submit" onclick="sendMail()" value="Submit" />
                     </div>
                 </form>
             </section>

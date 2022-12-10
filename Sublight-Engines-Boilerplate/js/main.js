@@ -53,6 +53,7 @@ const validateInputs = () => {
     } else {
         setSuccess(email);
     }
+
 };
 
 
@@ -70,3 +71,29 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click"),
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
 })
+
+// EMAIL JS
+
+// function sendMail() {
+//     var params = {
+//         name: document.getElementById("request_fullname").value,
+//         email: document.getElementById("email").value,
+//         phone: document.getElementById("request_phone").value,
+//         language: document.getElementById("request_language").value,
+//     };
+
+//     const serviceID = "service_gk8hxwg";
+//     const templateID= "template_75uzeig"
+    
+//     emailjs.send(serviceID, templateID, params)
+//     .then((res) => {
+//         document.getElementById("request_fullname").value = "";
+//         document.getElementById("email").value = "";
+//         document.getElementById("request_phone").value = "";
+//         document.getElementById("request_language").value = "";
+//         console.log(res);
+//         alert("Contact Request successfully sent!")
+//     })
+//     .catch(err=>console.log(err));
+
+// }
